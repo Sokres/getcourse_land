@@ -1,0 +1,135 @@
+.guarantee{
+  padding: 0 20px;
+}
+.guarantee__title{
+  margin: 0;
+  // line-height: 1.4;
+}
+.guarantee__subtitle{
+  margin: 0;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.3;
+}
+.guarantee__content{
+  margin: 30px 0;
+}
+.guarantee__text{
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.guarantee__wrap{
+  position: relative;
+  display: block;
+  width: 80%;
+  // padding: 10px;
+}
+.guarantee__wrap--text{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 30px;
+  background-color: rgba(8,51,114,0.38);
+  text-align: center;
+  transform: translate( -50%, -50%);
+  font-size: 22px;
+  color: var(--yellow);
+}
+.guarantee__img{
+  width: 80%;
+}
+.guarantee__img--pic{
+  width: 100%;
+  border-radius: 9px;
+}
+.guarantee__box{
+  margin: 30px 0;
+}
+.guarantee__title{
+  text-align: center;
+}
+.guarantee__list{
+  @extend .list-none;
+}
+.guarantee__item{
+  margin: 25px 0;
+}
+.guarantee__subname{
+  color: var(--blue);
+  font-weight: 500;
+}
+.guarantee__subtext{
+  margin: 0;
+  margin-top: 1px;
+}
+
+/* стили для смарт */
+.smart{
+  .guarantee__item{
+    position: relative;
+    padding-left: 10px;
+  }
+  .guarantee__item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--yellow);
+  }
+  .guarantee__subtext--focus-info{
+    font-weight: 500;
+    color: var(--red);
+  }
+}
+@include media-md{
+ .guarantee{
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 40px;
+ }
+ .guarantee__wrap{
+  width: auto;
+ }
+ .guarantee__content{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .guarantee__title{
+   margin-bottom: 10px;
+ }
+ .guarantee__text{
+  width: calc(100% / 12 * 6 - 30px);
+  margin: 0 15px;
+  max-width: 390px;
+
+ }
+ .guarantee__img{
+  width: calc(100% / 12 * 6 - 30px);
+  margin: 0 auto;
+ }
+ .guarantee__img--pic{
+   width: 400px;
+ }
+ .guarantee__subtitle{
+   font-size: 20px;
+ }
+ .guarantee__box{
+   order: 1;
+   width: calc(100% / 12 * 6 - 30px);
+   margin: 0 15px;
+ }
+
+}
+.marathon{
+  .guarantee__subtext{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+}

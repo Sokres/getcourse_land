@@ -1,0 +1,59 @@
+.how-sign{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.how-sign__wrap{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  margin-top: 30px;
+}
+.stages-sign{
+  display: flex;
+  align-items: center;
+}
+.stages-sign__image{
+  width: 50px;
+  height: 50px;
+}
+.stages-sign__text{
+  margin-left: 15px;
+  a{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--blue3);
+  }
+}
+.stages-sign:last-child .stages-sign__image{
+  transform: rotate(270deg);
+}
+@include media-lg{
+  .how-sign{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  .how-sign__title{
+    text-align: center;
+  }
+  .how-sign__wrap{
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+
+  }
+  .how-sign__list{
+    margin: 30px 10px;
+  }
+  .how-sign__list:last-child.stages-sign__image{
+    transform: rotate(0deg);
+  }
+  .stages-sign__image{
+    transform: rotate(270deg);
+  }
+  .how-sign.speaking{
+    .how-sign__wrap{
+      display: block;
+    }
+  }
+}
