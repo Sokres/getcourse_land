@@ -1,0 +1,266 @@
+// переменные
+$mw: min-width;
+$xs: 374px;
+$sm: 479px;
+$md: 768px;
+$lg: 1023px;
+$xl: 1200px;
+$pad-table: 40;
+$pad-mob: 20;
+
+// Миксины
+@mixin section{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@mixin padding($pad){
+  padding-left:$pad;
+  padding-right:$pad;
+}
+@mixin focus($bghover, $bgactive, $hover) {
+  &:hover,
+  &:focus {
+    background-color: $bghover;
+    color:$hover;
+    outline: none;
+      }
+  &:active{
+    background-color: $bgactive;
+  }
+  }
+@mixin hover($active, $hover) {
+  &:hover,
+  &:focus {
+    color:$hover;
+    outline: none;
+      }
+  &:active{
+    color: $active;
+  }
+  }
+
+  /*===Для медиа=== */
+
+  @mixin media-sm {
+    @media(min-width:$sm) {
+        @content;
+        }
+    }
+  @mixin media-md {
+    @media(min-width:$md) {
+        @content;
+        }
+    }
+  @mixin media-lg {
+    @media(min-width:$lg) {
+        @content;
+        }
+    }
+  @mixin media-xl {
+    @media(min-width:$xl) {
+        @content;
+        }
+    }
+
+
+// скрытие элментов
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+//Обнуление списка
+.list-none {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+ }
+//стили для кнопок
+.btn{
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+}
+.link{
+  width: 100%;
+  padding: 15px 0;
+}
+.shadow-link-alt{
+  box-shadow: 0px 0px 0px 2px var(--blue), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.shadow-link{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.link-info{
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--blue3);
+  transition: all .1s ease-in-out;
+  &:hover{
+    color: var(--blue);
+  }
+}
+
+
+
+@media($mw:$lg){
+  h1{
+    font-size: 60px;
+    line-height: 66px;
+  }
+  h2{
+    font-size: 52px;
+    line-height: 54px;
+  }
+  h3{
+    font-size: 32px;
+    line-height: 45px;
+  }
+}
+@media($mw:$xl){
+  h1{
+    font-size: 72px;
+    line-height: 83px;
+  }
+  h2{
+    font-size: 52px;
+    line-height: 54px;
+  }
+  h3{
+    font-size: 32px;
+    line-height: 45px;
+  }
+}
+.amoforms-footer-copyright{
+  display: none;
+}
+
+.course-lists{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+}
+
+
+
+
+
+/* Стили для Марафона */
+.marathon {
+  .three-day__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+      margin-right: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .three-day__link:focus,
+  .three-day__link:hover{
+    span{
+      transform: scale(1.05);
+
+    }
+  }
+  .marathon-btn{
+    width: 30px;
+    height: 30px;
+    fill: var(--dark2);
+  }
+  .about-eng__pretext {
+    font-size: 30px;
+  }
+  .plus-smart{
+    margin-top: 70px;
+  }
+  .plus-smart__number{
+    top: -36px;
+  }
+  @include media-md{
+
+    .about-speak{
+      margin-bottom: 50px;
+    }
+  }
+  .about-eng__info{
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .about-eng__pretext{
+    margin-top: 50px;
+    // padding: 20px 20px;
+    padding: 10px;
+    margin-bottom: 0;
+    border-radius: 5px;
+    background-color: var(--yellow);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--blue2);
+  }
+  .about-eng__text{
+    font-weight: 700;
+  }
+  .about-eng__subtitle{
+    font-size: 30px;
+    text-shadow: 1px 1px 1px var(--blue);
+  }
+  .about-eng__alt-text{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--red3);
+  }
+  .marathon-what{
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  .marathon-what__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .marathon-what__items{
+    display: flex;
+  }
+  .marathon-what__text{
+    margin-left: 20px;
+  }
+.marathon-what__image{
+  animation: arrow_mar 3s infinite;
+}
+  @include media-md{
+    .marathon-what__title{
+      text-align: center;
+    }
+    .marathon-what__list{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .marathon-what__image{
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+@keyframes arrow_mar{
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(10px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}

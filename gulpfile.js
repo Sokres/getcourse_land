@@ -36,5 +36,5 @@ const work = gulp.series(del,sprite, dev)
 // const branch = gulp.series(ftp)
 
 module.exports.start = gulp.series(setMode(), work, server )
-module.exports.build = gulp.series(setMode(true), del, sprite, build, ceche, clean_old)
+module.exports.build = gulp.series(setMode(true), del, sprite, build)
 

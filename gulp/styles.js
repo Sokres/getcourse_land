@@ -19,7 +19,6 @@ module.exports = function styles() {
   ]))
   .pipe(csso())
   .pipe(sourcemaps.write())
-  .pipe(rename({ suffix: '.min' }))
   .pipe(gulp.dest("build/css"))
 }
 

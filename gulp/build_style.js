@@ -4,8 +4,8 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const rename = require("gulp-rename");
+const sourcemaps = require('gulp-sourcemaps');
 const csso = require('gulp-csso');
-const gcmq = require('gulp-group-css-media-queries');
 
 
 
@@ -17,8 +17,7 @@ module.exports = function styles() {
     autoprefixer()
   ]))
   .pipe(csso())
-  .pipe(gcmq())
-  .pipe(rename({ suffix: '.min' }))
+  .pipe(sourcemaps.write())
   .pipe(gulp.dest("build/css"))
 }
 
