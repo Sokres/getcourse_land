@@ -180,17 +180,28 @@ $pad-mob: 20;
   .feedback{
     padding: 0 40px;
   }
-  .feedback__prev{
-    left: 30%;
-    bottom: 0;
+  .feedback__prev,.feedback__next{
+    bottom: 10px;
     top: auto;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    border: 2px solid var(--yellow);
+    border-radius: 100%;
+  }
+  .feedback__prev{
+    left: 40%;
+  }
+  .feedback__next{
+    right: 40%;
   }
   .swiper-button-prev::after,.swiper-button-next::after{
-    padding: 20px;
-    border: 1px solid var(--yellow);
-    border-radius: 100%;
     background-color: transparent;
     color: var(--yellow);
+    font-size: 20px;
+  }
+  .swiper-slide img, .swiper-wrapper{
+    margin-bottom: 15px;
   }
 }
 @include media-lg{

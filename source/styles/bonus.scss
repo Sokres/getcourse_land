@@ -136,72 +136,38 @@ $pad-mob: 20;
   }
 }
 
-.info-progress{
-  padding-right: 20px;
+.bonus{
   padding-left: 20px;
-  margin-top: 30px;
+  padding-right: 20px;
+  background: linear-gradient(166deg, rgba(240,240,240,1) 54%, rgba(255,233,109,1) 54%);
 }
-
-.passage{
+.bonus__list{
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
-.info-progress__wrap{
-  margin: 40px 0;
+.bonus__item{
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 30px;
 }
-.passage__text{
-  position: relative;
-  margin: 20px 0;
-  padding-left: 60px;
-  box-shadow: 0 0 2px 2px var(--focus);
+.bonus__image{
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
 }
-.passage__text::before{
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background-color: var(--yellow);
-  transform: translateY(-50%);
+.bonus__text{
+  font-size: 20px;
 }
 @include media-md{
-  .info-progress__title{
-    text-align: center;
-  }
-  .info-progress__wrap{
+  .bonus__wrap{
     max-width: 1200px;
     margin: 0 auto;
   }
-  .passage{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -15px;
-    align-items: flex-start;
-  }
-  .passage__text{
+  .bonus__item{
     width: calc(33.33% - 30px);
-    margin: 15px;
-    padding: 15px;
-    box-shadow: 0 -4px 0 0 var(--yellow),
-    20px 20px 60px #ceced1,
-    -20px -20px 60px #ffffff;
-    border-radius: 12px;
-    background-color: var(--white3);
-  }
-  .passage__text::before{
-    display: none;
-  }
-}
-@include media-lg{
-  .info-progress__wrap{
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
-  }
-  .passage__text{
-    width: calc(25% - 30px);
   }
 }
