@@ -1,0 +1,47 @@
+
+.about-speak{
+  padding: 0 20px;
+}
+.about-speak__list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.about-speak__item{
+  margin: 15px 0;
+}
+.box-tick{
+  display: flex;
+}
+.box-tick__image{
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  // align-self: center;
+}
+.box-tick__text{
+  // align-self: center;
+  margin: 0;
+}
+@include media-md{
+  .about-speak{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .about-speak__title{
+    text-align: center;
+  }
+  .about-speak__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  .about-speak__item{
+    width: calc(50% - 30px);
+    margin: 10px 15px;
+  }
+  .box-tick__text{
+    font-size: 20px;
+  }
+}
+

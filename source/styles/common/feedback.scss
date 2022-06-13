@@ -1,0 +1,100 @@
+
+
+
+
+.feedback{
+  // padding: 0 20px;
+  min-width: 360px;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-wrapper{
+  border-radius: 12px;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: auto;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;;
+}
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-left{
+  // background: transparent;
+}
+.swiper-button-prev::after,.swiper-button-next::after{
+  padding: 30px 5px;
+  border-radius: 3px;
+  background-color: var(--yellow);
+  color: var(--white);
+}
+.swiper-pagination-bullet-active{
+  background-color: var(--yellow);
+}
+@include media-md{
+  .feedback{
+    padding: 0 40px;
+  }
+  .feedback__prev,.feedback__next{
+    bottom: 10px;
+    top: auto;
+    width: 20px;
+    height: 20px;
+    padding: 20px;
+    border: 2px solid var(--yellow);
+    border-radius: 100%;
+  }
+  .feedback__prev{
+    left: 40%;
+  }
+  .feedback__next{
+    right: 40%;
+  }
+  .swiper-button-prev::after,.swiper-button-next::after{
+    background-color: transparent;
+    color: var(--yellow);
+    font-size: 20px;
+  }
+  .swiper-slide img, .swiper-wrapper{
+    margin-bottom: 15px;
+  }
+}
+@include media-lg{
+  .feedback{
+    // max-width: 1200px;
+    // margin: 0 auto;
+  }
+}
+
+/* Секция с информацией перед  отзывами */
+.feedback-info{
+
+  padding: 30px 40px;
+  background-color: var(--blue);
+  // background-image: url('../img/blue-curve.svg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+
+}
+.fedback-info__title{
+  margin: 0;
+  text-align: center;
+  color: var(--yellow2);
+}
+
+@include media-md{
+
+  .fedback-info__title{
+    margin: 0 auto;
+    max-width: 900px;
+  }
+}

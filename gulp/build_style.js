@@ -17,7 +17,6 @@ module.exports = function styles() {
     autoprefixer()
   ]))
   .pipe(csso())
-  .pipe(sourcemaps.write())
   .pipe(gulp.dest("build/css"))
 }
 
